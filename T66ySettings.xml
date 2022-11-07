@@ -5,7 +5,7 @@
 	极限值：0 - 999999
 	建议值：200 - 10000
 	-->
-	<download_min>200</download_min>
+	<download_min>400</download_min>
 	<download_max>10000</download_max>
 	
 	<!--

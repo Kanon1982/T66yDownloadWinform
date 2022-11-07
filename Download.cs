@@ -8,8 +8,7 @@ namespace T66yDownloadWinform
 {
     class Download
     {
-        public static
-
+    
 
     }
 }
