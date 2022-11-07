@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<!--
+	最小和最大访问量
+	极限值：0 - 999999
+	建议值：200 - 10000
+	-->
+	<download_min>200</download_min>
+	<download_max>10000</download_max>
+	
+	<!--
+	最少和最多下载页数
+	极限值: 1 - 100
+	理论值: 1 - 15
+	-->
+	<page_min>1</page_min>
+	<page_max>15</page_max>
+	
+	<!--
+	最少和最多下载天数
+	极限值: 1 - 90
+	理论值: 1 - 30
+	-->
+	<day_min>1</day_min>
+	<day_max>30</day_max>
+	
+	<!--注意：等待时长不可以太小，否则会被网站发现是在爬虫，导致报错-->
+		<!--隐式等待时长，单位：秒-->
+	<implicitly_time>13</implicitly_time>
+		<!--强制等待时长，单位：毫秒-->
+	<sleep_time>3</sleep_time>
+</settings>
+
+
+
+
