@@ -4,7 +4,10 @@
 !!下载过程需要全程保持翻墙!!<br>
 !!下载过程需要全程保持翻墙!!<br>
 
-本脚本由 c# 和 selenium 编写，并使用Chrome的107版本浏览器下载，别的浏览器不行
+本脚本由 c# 和 selenium 编写，并使用Chrome的107版本浏览器下载，别的浏览器不行。
+如果Chrome版本不是107版本，请<a href="https://registry.npmmirror.com/binary.html?path=chromedriver/">下载Chrome驱动</a>，并解压
+先安装完本软件，之后把软件安装目录下的 `chromedriver.exe` 替换成 驱动压缩包里的 `chromedriver.exe`，
+然后，再运行exe文件
 
 草榴社区：t66y.com
 
