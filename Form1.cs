@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,9 @@ namespace T66yDownloadWinform
 {
     public partial class Form1 : Form
     {
+        // 声明一个 Download 引用
+        Download down = null;
+
         /// <summary>
         /// 主窗体 构造方法
         /// </summary>
@@ -20,8 +24,8 @@ namespace T66yDownloadWinform
         {
             InitializeComponent();
 
-            // 打开主窗体后，立即 读取xml文件
-            MyTools.get_xml_info();
+            // 给 down 引用创建 对象
+            down = new Download();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -324,13 +328,43 @@ namespace T66yDownloadWinform
         /// <param name="e"></param>
         private void btn_download_Click(object sender, EventArgs e)
         {
-            Download down = new Download();
-
+            
             string area_str = combo_area.Text;                          // 获取 区域文本
             bool down_break = cb_break_down.Checked;                    // 获取 是否下载破坏版
             int download_input = int.Parse(textbox_download.Text);      // 获取 下载量
 
+            int download_pages = int.Parse(tb_page_or_day.Text);        // 获取 下载的页数
+            int download_days = int.Parse(tb_page_or_day.Text);         // 获取 下载的天数
 
+            IWebDriver drvier = null;   // 声明一个WebDriver引用，用于finally中关闭
+
+            try
+            {
+                drvier = down.getDriver();          // 给Download对象 创建一个web driver对象
+
+                down.go_to_area_func(area_str);     // 从 主页 进入 具体区域
+
+                // 如果 根据页数radio 激活
+                if (rd_by_page.Checked)
+                {
+
+                    down.download_by_page_func(download_input, down_break, download_pages);
+                }
+
+                // 如果 根据天数radio 激活
+                if (rd_by_day.Checked)
+                {
+                    down.download_by_days_func(download_input, down_break, download_days);
+                }
+            }
+            catch (Exception e2)
+            {
+                Console.WriteLine(e2.Message);
+            }
+            finally
+            {
+                down.closeDriver();     // 关闭webdriver驱动，防止后台偷偷运行
+            }
         }
     }
 }

@@ -37,6 +37,7 @@
             this.sc_1 = new System.Windows.Forms.SplitContainer();
             this.rd_by_day = new System.Windows.Forms.RadioButton();
             this.rd_by_page = new System.Windows.Forms.RadioButton();
+            this.lb_page_or_day_error = new System.Windows.Forms.Label();
             this.tb_page_or_day = new System.Windows.Forms.TextBox();
             this.lb_by_page_or_day = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -44,7 +45,6 @@
             this.lb_line2 = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
             this.lb_download_error = new System.Windows.Forms.Label();
-            this.lb_page_or_day_error = new System.Windows.Forms.Label();
             this.btn_download = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sc_1)).BeginInit();
             this.sc_1.Panel1.SuspendLayout();
@@ -154,6 +154,17 @@
             this.rd_by_page.UseVisualStyleBackColor = true;
             this.rd_by_page.CheckedChanged += new System.EventHandler(this.rd_by_page_CheckedChanged);
             // 
+            // lb_page_or_day_error
+            // 
+            this.lb_page_or_day_error.AutoSize = true;
+            this.lb_page_or_day_error.ForeColor = System.Drawing.Color.Red;
+            this.lb_page_or_day_error.Location = new System.Drawing.Point(46, 141);
+            this.lb_page_or_day_error.Name = "lb_page_or_day_error";
+            this.lb_page_or_day_error.Size = new System.Drawing.Size(89, 12);
+            this.lb_page_or_day_error.TabIndex = 2;
+            this.lb_page_or_day_error.Text = "输入内容不合法";
+            this.lb_page_or_day_error.Visible = false;
+            // 
             // tb_page_or_day
             // 
             this.tb_page_or_day.Location = new System.Drawing.Point(39, 108);
@@ -221,17 +232,6 @@
             this.lb_download_error.Text = "输入内容不合法";
             this.lb_download_error.Visible = false;
             // 
-            // lb_page_or_day_error
-            // 
-            this.lb_page_or_day_error.AutoSize = true;
-            this.lb_page_or_day_error.ForeColor = System.Drawing.Color.Red;
-            this.lb_page_or_day_error.Location = new System.Drawing.Point(46, 141);
-            this.lb_page_or_day_error.Name = "lb_page_or_day_error";
-            this.lb_page_or_day_error.Size = new System.Drawing.Size(89, 12);
-            this.lb_page_or_day_error.TabIndex = 2;
-            this.lb_page_or_day_error.Text = "输入内容不合法";
-            this.lb_page_or_day_error.Visible = false;
-            // 
             // btn_download
             // 
             this.btn_download.Location = new System.Drawing.Point(473, 308);
@@ -260,7 +260,7 @@
             this.Controls.Add(this.lb_area);
             this.Controls.Add(this.combo_area);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(710, 370);
+            this.MinimumSize = new System.Drawing.Size(718, 387);
             this.Name = "Form1";
             this.Text = "T66yDownloadWinform";
             this.Load += new System.EventHandler(this.Form1_Load);

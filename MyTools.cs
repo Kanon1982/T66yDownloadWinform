@@ -20,11 +20,17 @@ namespace T66yDownloadWinform
         /// <returns>根据xml文件生成的SettingsModel对象</returns>
         public static void get_xml_info() 
         {
+            /* 注意修改以下路径 */
+            /* 1.Debug 时候xml文件的配置路径 */
+            /*
             DirectoryInfo rootDir = Directory.GetParent(Environment.CurrentDirectory);      // 项目路径\bin
             string root = rootDir.Parent.FullName;      // 项目根路径
             string xmlDir = root + @"\T66ySettings.xml";   // xml文件路径
-            Console.WriteLine(xmlDir);
+            */
 
+            /* 2.release 时候xml文件的配置路径 */
+            string xmlDir = @".\T66ySettings.xml";   // xml文件路径
+            Console.WriteLine(xmlDir);
 
             XmlDocument doc = new XmlDocument();    // 创建 xml 文档对象
             XmlReaderSettings readerSettings = new XmlReaderSettings();

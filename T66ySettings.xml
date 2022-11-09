@@ -5,7 +5,7 @@
 	极限值：0 - 999999
 	建议值：200 - 10000
 	-->
-	<download_min>600</download_min>
+	<download_min>200</download_min>
 	<download_max>10000</download_max>
 	
 	<!--
@@ -26,9 +26,9 @@
 	
 	<!--注意：等待时长不可以太小，否则会被网站发现是在爬虫，导致报错-->
 		<!--隐式等待时长，单位：秒-->
-	<implicitly_time>13</implicitly_time>
+	<implicitly_time>8</implicitly_time>
 		<!--强制等待时长，单位：毫秒-->
-	<sleep_time>3</sleep_time>
+	<sleep_time>3000</sleep_time>
 </settings>
 
 

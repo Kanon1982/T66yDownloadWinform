@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace T66yDownloadWinform
 {
-    public class SettingsModel 
+    public static class SettingsModel 
     {
         // 最小和最大访问量
         public static int download_min = 200;
@@ -22,7 +22,7 @@ namespace T66yDownloadWinform
 
         // 注意：等待时长不可以太小，否则会被网站发现是在爬虫，导致报错
             // 隐式等待时长，秒
-        public static int implicitly_time = 13;
+        public static int implicitly_time = 8;
             // 强制等待时长，毫秒
         public static int sleep_time = 3000;
 

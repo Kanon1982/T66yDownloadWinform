@@ -17,9 +17,7 @@ namespace T66yDownloadWinform
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
-            //MyTools.get_xml_info();
-            //Console.ReadLine(); 
+            
         }
     }
 }
